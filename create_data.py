@@ -9,12 +9,12 @@ data = {
     'Projects': np.random.randint(0, 5, 500),
     'Aptitude_Score': np.random.randint(50, 100, 500),
     'Soft_Skills_Rating': np.random.randint(1, 6, 500),
-    'Coding_Skills_Rating': np.random.randint(1, 6, 500) # New Feature!
+    'Coding_Skills_Rating': np.random.randint(1, 6, 500) 
 }
 
 df = pd.DataFrame(data)
 
-# Updated logic: Coding skills and core projects heavily influence the outcome
+
 def calculate_placement(row):
     score = (row['CGPA'] * 10) + (row['Internships'] * 15) + (row['Projects'] * 12) + \
             (row['Aptitude_Score'] * 0.5) + (row['Soft_Skills_Rating'] * 4) + \
